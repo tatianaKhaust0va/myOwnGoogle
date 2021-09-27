@@ -19,7 +19,7 @@ body {
 .header {
 	height: 80px;
 	&-nav {
-		width: 30%;
+		width: 18%;
 		&-menu {
 			height: 50px;
 			@extend %flexCenter;
@@ -67,7 +67,9 @@ body {
 	&-form {
 	@extend %flexCenter;
 		position: relative;
-		height: 150px;
+		flex-wrap: wrap;
+		width: 44%;
+		height: 209px;
 		&__item {
 			height: 50px;
 			width: 450px;
@@ -95,6 +97,10 @@ body {
 			border-top-right-radius: 100px;
 			border-bottom-right-radius: 100px;
 			cursor: pointer;
+			&.buttom-btn {
+				border-radius: 100px;
+				width: 300px;
+			}
 			&:hover {
 				box-shadow: -1px 4px 9px 1px orangered;
 				transition: .2s all ease-in-out;
@@ -106,6 +112,7 @@ body {
 			font-size: 20px;
 			position: absolute;
 			padding-left: 15px;
+			top: 20%;
 			left: 0;
 			color: $textColor;
 			border-right: 4px solid $cursorColor;

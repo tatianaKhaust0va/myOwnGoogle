@@ -19,9 +19,6 @@
     <li class="header-nav-menu__item">
      <a href="https://google.com" class="header-nav-menu__link">Advanced Search</a>
     </li>
-    <li class="header-nav-menu__item">
-     <a href="https://www.google.com/doodles" class="header-nav-menu__link"> I am lucky</a>
-    </li>
    </ul>
   </nav>
  </header>
@@ -34,12 +31,14 @@
    <span class="main-title__item">c</span>
    <span class="main-title__item">h</span>
   </div>
-  <form action="#" method="GET" class="main-form">
-   <input type="text" placeholder=" " class="main-form__item" id="search">
+  <form action="https://www.google.com/search" target="_blank" method="GET" class="main-form">
+   <input type="search" name="search" placeholder=" " class="main-form__item" id="search">
    <label class="main-form__desc" for="search">What shall we searching for? </label>
-   <input type="button" value="Search" class="main-form__btn">
+   <input type="submit" value="Search" class="main-form__btn">
+   <input type="submit" value="I am lucky" class="main-form__btn buttom-btn">
   </form>
  </main>
+ <script src="js/main.js"></script>
 </body>
 
 </html>
