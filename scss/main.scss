@@ -6,20 +6,20 @@
  	padding: 0 0;
  	box-sizing: border-box;
 }
-
-._container {
-	width: 100%;
-	max-width: 1170px;
-	margin: 0 auto;
-}
 body {
 	color: blue;
 	font-size: 18px;
 }
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
 .header {
 	height: 80px;
 	&-nav {
-		width: 18%;
+		width: 30%;
 		&-menu {
 			height: 50px;
 			@extend %flexCenter;
