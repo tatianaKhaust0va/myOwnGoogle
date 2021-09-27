@@ -1,0 +1,135 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+	 margin: 0 0;
+ 	padding: 0 0;
+ 	box-sizing: border-box;
+}
+
+._container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+body {
+	color: blue;
+	font-size: 18px;
+}
+.header {
+	height: 80px;
+	&-nav {
+		width: 18%;
+		&-menu {
+			height: 50px;
+			@extend %flexCenter;
+			justify-content: space-between;
+			&__item {
+				list-style-type: none;
+				font-weight: 600;
+			}
+			&__link {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+				&:hover {
+					@extend %titleColor;
+				}
+			}
+		}
+	}
+}
+.main {
+	@extend %flexCenter;
+	flex-direction: column;
+	&-title {
+		display: flex;
+		&__item {
+			display: block;
+			font-family: 'Arial', 'sans-serif';
+			font-weight: 600;
+			font-size: 80px;
+			&:first-child {
+				color: red;
+				transform: rotateZ(155deg);
+			}
+			&:nth-child(2n) {
+				@extend %titleColor;
+			}
+			&:nth-child(3) {
+				color: green;
+			}
+			&:last-child {
+				  transform: rotate(12deg);
+			}
+		}
+	}
+	&-form {
+	@extend %flexCenter;
+		position: relative;
+		height: 150px;
+		&__item {
+			height: 50px;
+			width: 450px;
+			padding: 15px;
+			border: 3px solid orangered;
+			border-top-left-radius: 100px;
+			border-bottom-left-radius: 100px;
+			border-right:  none;
+			outline: none;
+			font-size: 20px;
+			&:focus + label,
+			&:not(:placeholder-shown) + label {
+				opacity: 0;
+				transition: all .2s ease-in-out;
+				outline: none;
+				border: none;
+			}
+		}
+		&__btn {
+			height: 50px;
+			background: orangered;
+			border: none;
+			padding: 0 10px;
+			color: white;	
+			border-top-right-radius: 100px;
+			border-bottom-right-radius: 100px;
+			cursor: pointer;
+			&:hover {
+				box-shadow: -1px 4px 9px 1px orangered;
+				transition: .2s all ease-in-out;
+			}
+		}
+		&__desc {
+			width: 30ch;
+			font-family: monospace;
+			font-size: 20px;
+			position: absolute;
+			padding-left: 15px;
+			left: 0;
+			color: $textColor;
+			border-right: 4px solid $cursorColor;
+			white-space: nowrap;
+			font-weight: bolder;
+			overflow: hidden;
+			animation: flashingCursor 0.75s infinite step-end, typingText 3s steps(30);
+		}
+		@keyframes flashingCursor {
+			0% {
+				border-color: $cursorColor;
+			}
+			50% {
+				border-color: transparent;
+			}
+			100% {
+				border-color: $cursorColor;
+			}
+		}
+		@keyframes typingText {
+			from {
+				width: 0;
+			}
+			
+		}
+	}
+}
