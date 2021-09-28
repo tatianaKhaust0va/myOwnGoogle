@@ -32,13 +32,17 @@
    <span class="main-title__item">h</span>
   </div>
   <form action="https://www.google.com/search" target="_blank" method="GET" class="main-form">
-   <input type="search" name="search" placeholder=" " class="main-form__item" id="search">
-   <label class="main-form__desc" for="search">What shall we searching for? </label>
-   <input type="submit" value="Search" class="main-form__btn">
-   <input type="submit" value="I am lucky" class="main-form__btn buttom-btn">
+   <div class="main-form-search">
+    <input type="search" name="q" placeholder=" " class="main-form-search__item" id="search">
+    <label class="main-form-search__desc" for="search">What shall we searching for? </label>
+    <input type="submit" value="Search" class="main-form-search__btn">
+   </div>
+   <div class="main-form-btns">
+    <input type="submit" value="Search Google" class="main-form-btns__item">
+    <input type="submit" value="I am lucky" class="main-form-btns__item">
+   </div>
   </form>
  </main>
- <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -6,3 +6,17 @@
 %titleColor {
  color: $textColorLight;
 }
+%btnStyle {
+		height: 50px;
+			background: orangered;
+			border: none;
+			padding: 0 10px;
+			color: white;	
+			border-top-right-radius: 100px;
+			border-bottom-right-radius: 100px;
+			cursor: pointer;
+			&:hover {
+				box-shadow: -1px 4px 9px 1px orangered;
+				transition: .2s all ease-in-out;
+			}
+}

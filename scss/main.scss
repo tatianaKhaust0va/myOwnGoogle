@@ -66,77 +66,76 @@ body {
 	}
 	&-form {
 	@extend %flexCenter;
-		position: relative;
-		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-evenly;
 		width: 44%;
 		height: 209px;
-		&__item {
+		&-search {
 			height: 50px;
-			width: 450px;
-			padding: 15px;
-			border: 3px solid orangered;
-			border-top-left-radius: 100px;
-			border-bottom-left-radius: 100px;
-			border-right:  none;
-			outline: none;
-			font-size: 20px;
-			&:focus + label,
-			&:not(:placeholder-shown) + label {
-				opacity: 0;
-				transition: all .2s ease-in-out;
+			position: relative;
+			display: flex;
+			&__item {
+				height: 50px;
+				width: 450px;
+				padding: 15px;
+				border: 3px solid orangered;
+				border-top-left-radius: 100px;
+				border-bottom-left-radius: 100px;
+				border-right:  none;
 				outline: none;
-				border: none;
+				font-size: 20px;
+				&:focus + label,
+				&:not(:placeholder-shown) + label {
+					opacity: 0;
+					transition: all .2s ease-in-out;
+					outline: none;
+					border: none;
+				}
 			}
+			&__btn {
+				@extend %btnStyle;
+			}
+			&__desc {
+				width: 30ch;
+				font-family: monospace;
+				font-size: 20px;
+				position: absolute;
+				padding-left: 15px;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				color: $textColor;
+				border-right: 4px solid $cursorColor;
+				white-space: nowrap;
+				font-weight: bolder;
+				overflow: hidden;
+				animation: flashingCursor 0.75s infinite step-end, typingText 3s steps(30);
+			}
+			@keyframes flashingCursor {
+				0% {
+					border-color: $cursorColor;
+				}
+				50% {
+					border-color: transparent;
+				}
+				100% {
+					border-color: $cursorColor;
+				}
+			}
+			@keyframes typingText {
+				from {
+					width: 0;
+				}
 		}
-		&__btn {
-			height: 50px;
-			background: orangered;
-			border: none;
-			padding: 0 10px;
-			color: white;	
-			border-top-right-radius: 100px;
-			border-bottom-right-radius: 100px;
-			cursor: pointer;
-			&.buttom-btn {
+		}
+		&-btns {
+			&__item {
+				@extend %btnStyle;
+				width: 200px;
 				border-radius: 100px;
-				width: 300px;
-			}
-			&:hover {
-				box-shadow: -1px 4px 9px 1px orangered;
-				transition: .2s all ease-in-out;
+				margin-left: 30px;
 			}
 		}
-		&__desc {
-			width: 30ch;
-			font-family: monospace;
-			font-size: 20px;
-			position: absolute;
-			padding-left: 15px;
-			top: 20%;
-			left: 0;
-			color: $textColor;
-			border-right: 4px solid $cursorColor;
-			white-space: nowrap;
-			font-weight: bolder;
-			overflow: hidden;
-			animation: flashingCursor 0.75s infinite step-end, typingText 3s steps(30);
 		}
-		@keyframes flashingCursor {
-			0% {
-				border-color: $cursorColor;
-			}
-			50% {
-				border-color: transparent;
-			}
-			100% {
-				border-color: $cursorColor;
-			}
-		}
-		@keyframes typingText {
-			from {
-				width: 0;
-			}
-			
-		}
-	}
 }
+
