@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="../css/main.min.css">
+ <title>Advanced Search</title>
+</head>
+
+<body>
+ <header class="header header--advanced">
+  <div class="container">
+   <nav class="header-nav">
+    <div class="header-nav-logo">
+     <span class="header-nav-logo__item">S</span>
+     <span class="header-nav-logo__item">e</span>
+     <span class="header-nav-logo__item">a</span>
+     <span class="header-nav-logo__item">r</span>
+     <span class="header-nav-logo__item">c</span>
+     <span class="header-nav-logo__item">h</span>
+    </div>
+    <ul class="header-nav-menu">
+     <li class="header-nav-menu__item">
+      <a href="../index.html" class="header-nav-menu__link">Back to Search</a>
+     </li>
+    </ul>
+   </nav>
+   <h1 class="header__title">Advanced Search</h1>
+  </div>
+ </header>
+ <main class="main container main--advanced">
+  <form action="https://www.google.com/search" name="f" target="_blank" method="GET" class="main-form advanced">
+   <div class="main-form-search pos">
+    <div class="form-search-info">
+     <div class="form-search-info-text">
+      <h4 class="search-info-text__title">
+       Find pages with...
+      </h4>
+      <h4 class="search-info-text__title">
+       To do this in the search box.
+      </h4>
+
+     </div>
+     <div class="search-info-block">
+      <div id="label-as-q">
+       <label for="input-as-q-item" class="search-info-block__item">
+        all these words:
+       </label>
+      </div>
+      <div id="input-as-q">
+       <input type="text" name="as_q" class="search-info-block__input" id="input-as-q-item">
+      </div>
+      <div id="text-as-q">
+       <p class="search-info-block__desc">
+        Type the important words: tri-colour rat terrier
+       </p>
+      </div>
+     </div>
+     <div class="search-info-block">
+      <div id="label-as-epq">
+       <label for="input-as-q-item" class="search-info-block__item">
+        this exact word or phrase:
+       </label>
+      </div>
+      <div id="input-as-epq">
+       <input type="text" name="as_epq" class="search-info-block__input" id="input-as-epq-item">
+      </div>
+      <div id="text-as-epq">
+       <p class="search-info-block__desc">
+        Put exact words in quotes: <span>rat terrier</span>
+       </p>
+      </div>
+
+     </div>
+     <div class="search-info-block">
+      <div id="label-as-oq">
+       <label for="input-as-oq-item" class="search-info-block__item">
+        any of these words:
+       </label>
+      </div>
+      <div id="input-as-oq">
+       <input type="text" name="as_oq" class="search-info-block__input" id="input-as-oq-item">
+      </div>
+      <div id="text-as-oq">
+       <p class="search-info-block__desc">
+        Type OR between all the words you want: miniature OR standard
+       </p>
+      </div>
+
+     </div>
+     <div class="search-info-block">
+      <div id="label-as-eq">
+       <label for="input-as-eq-item" class="search-info-block__item">
+        none of these words:
+       </label>
+      </div>
+      <div id="input-as-eq">
+       <input type="text" name="as_eq" class="search-info-block__input" id="input-as-eq-item">
+      </div>
+      <div id="text-as-eq">
+       <p class="search-info-block__desc">
+        Put a minus sign just before words that you don't want: <br>-rodent, -<span>Jack Russell</span>
+       </p>
+      </div>
+
+     </div>
+     <div class="search-info-btn">
+      <input type="submit" value="Advanced Search" class="search-info-btn__item">
+     </div>
+    </div>
+   </div>
+  </form>
+ </main>
+</body>
+
+</html>

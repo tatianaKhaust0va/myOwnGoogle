@@ -5,8 +5,8 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="css/main.min.css">
- <title>Search</title>
+ <link rel="stylesheet" href="../css/main.min.css">
+ <title>Search Images</title>
 </head>
 
 <body>
@@ -14,10 +14,7 @@
   <nav class="header-nav">
    <ul class="header-nav-menu">
     <li class="header-nav-menu__item">
-     <a href="pages/images.html" class="header-nav-menu__link">Images</a>
-    </li>
-    <li class="header-nav-menu__item">
-     <a href="pages/advacedSearch.html" class="header-nav-menu__link">Advanced Search</a>
+     <a href="../index.html" class="header-nav-menu__link">Back to Search</a>
     </li>
    </ul>
   </nav>
@@ -28,18 +25,16 @@
    <span class="header-title__item">r</span>
    <span class="header-title__item">c</span>
    <span class="header-title__item">h</span>
+   <h3 class="header-title__sub">Images</h3>
   </div>
  </header>
  <main class="main container">
-  <form action="https://www.google.com/search?" role="search" target="_blank" method="GET" class="main-form">
+  <form action="https://www.google.com/images" name="search" method="GET" class="main-form" target="_blank">
    <div class="main-form-search">
-    <input type="search" name="q" placeholder="type here" class="main-form-search__item" id="search">
-    <label class="main-form-search__label" for="search">What shall we searching for? </label>
+    <input type="text" name="q" placeholder="type for search" class="main-form-search__item" id="search">
+    <label class="main-form-search__label img-placeholder" for="search">What image shall we searching for? </label>
+
     <input type="submit" value="Search" class="main-form-search__btn">
-   </div>
-   <div class="main-form-btns">
-    <input type="submit" name="btnk" value="Search Google" class="main-form-btns__item">
-    <input type="submit" name="btnI" value="I am lucky" class="main-form-btns__item">
    </div>
   </form>
  </main>

@@ -3,6 +3,25 @@
 		justify-content: center;
 		align-items: center;
 }
+%titleLogoStyle {
+			display: block;
+			font-family: 'Arial', 'sans-serif';
+			font-weight: 600;
+			font-size: 80px;
+			&:first-child {
+				color: red;
+				transform: rotateZ(155deg);
+			}
+			&:nth-child(2n) {
+				@extend %titleColor;
+			}
+			&:nth-child(3) {
+				color: green;
+			}
+			&:nth-child(6) {
+				  transform: rotate(12deg);
+		}
+}
 %titleColor {
  color: $textColorLight;
 }
@@ -19,4 +38,47 @@
 				box-shadow: -1px 4px 9px 1px orangered;
 				transition: .2s all ease-in-out;
 			}
+}
+%inputStyles {
+				height: 50px;
+				width: 450px;
+				padding: 15px;
+				border: 3px solid orangered;
+				border-top-left-radius: 100px;
+				border-bottom-left-radius: 100px;
+				border-right:  none;
+				outline: none;
+				font-size: 20px;
+				&::-webkit-input-placeholder,
+				&:focus + label,
+				&:not(:placeholder-shown) + label {
+					opacity: 0;
+					transition: all .2s ease-in-out;
+					outline: none;
+					border: none;
+				}
+}
+%advancedContentStyle {
+	#text-as-q,
+	#text-as-epq,
+	#text-as-oq,
+	#text-as-eq,
+	#input-as-q,
+	#input-as-epq,
+	#input-as-eq,
+	#input-as-oq {
+		width: 100%;
+	}
+	#input-as-q,
+	#input-as-epq,
+	#input-as-eq,
+	#input-as-oq {
+		margin-right: 30px;
+	}
+	#label-as-q,
+	#label-as-epq,
+	#label-as-eq,
+	#label-as-oq {
+		width: 500px;
+	}
 }
