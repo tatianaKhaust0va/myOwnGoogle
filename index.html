@@ -17,32 +17,27 @@
      <a href="pages/images.html" class="header-nav-menu__link">Images</a>
     </li>
     <li class="header-nav-menu__item">
-     <a href="pages/advacedSearch.html" class="header-nav-menu__link">Advanced Search</a>
+     <a href="pages/advancedSearch.html" class="header-nav-menu__link">Advanced Search</a>
     </li>
    </ul>
   </nav>
-  <div class="header-title">
-   <span class="header-title__item">S</span>
-   <span class="header-title__item">e</span>
-   <span class="header-title__item">a</span>
-   <span class="header-title__item">r</span>
-   <span class="header-title__item">c</span>
-   <span class="header-title__item">h</span>
-  </div>
+  <div class="header__logo"></div>
  </header>
  <main class="main container">
-  <form action="https://www.google.com/search?" role="search" target="_blank" method="GET" class="main-form">
+  <form action="http://www.google.com/search?" role="search" target="_blank" method="GET" class="main-form">
    <div class="main-form-search">
+    <input name="q" type="hidden" id="hidden">
     <input type="search" name="q" placeholder=" " class="main-form-search__item" id="search">
     <label class="main-form-search__label" for="search">What shall we searching for? </label>
     <input type="submit" value="Search" class="main-form-search__btn">
    </div>
    <div class="main-form-btns">
     <input type="submit" name="btnk" value="Search Google" class="main-form-btns__item">
-    <input type="submit" name="btnI" value="I am lucky" class="main-form-btns__item">
+    <input type="submit" name="btnI" value="I am lucky" class="main-form-btns__item" id="lucky">
    </div>
   </form>
  </main>
+ <script src="js/main.js"></script>
 </body>
 
 </html>
