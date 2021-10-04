@@ -10,25 +10,29 @@
 </head>
 
 <body>
- <header class="header container">
-  <nav class="header-nav">
-   <ul class="header-nav-menu">
-    <li class="header-nav-menu__item">
-     <a href="../index.html" class="header-nav-menu__link">Back to Search</a>
-    </li>
-   </ul>
-  </nav>
-  <div class="header__logo search-img"></div>
+ <header class="header">
+  <div class="container">
+   <nav class="header-nav">
+    <ul class="header-nav-menu">
+     <li class="header-nav-menu__item">
+      <a href="../index.html" class="header-nav-menu__link">Back to Search</a>
+     </li>
+    </ul>
+   </nav>
+   <div class="header__logo search-img"></div>
+  </div>
  </header>
- <main class="main container">
-  <form action="https://www.google.com/images" name="search" method="GET" class="main-form" target="_blank">
-   <div class="main-form-search">
-    <input type="text" name="q" placeholder=" " class="main-form-search__item" id="search">
-    <label class="main-form-search__label img-placeholder" for="search">What image shall we searching for? </label>
+ <main class="main">
+  <div class="container">
+   <form action="https://www.google.com/images" name="search" method="GET" class="main-form img-search" target="_blank">
+    <div class="main-form-search">
+     <input type="text" name="q" placeholder=" " class="main-form-search__item" id="search">
+     <label class="main-form-search__label img-placeholder" for="search">What image shall we searching for? </label>
 
-    <input type="submit" value="Search" class="main-form-search__btn">
-   </div>
-  </form>
+     <input type="submit" value="Search" class="main-form-search__btn">
+    </div>
+   </form>
+  </div>
  </main>
 </body>
 

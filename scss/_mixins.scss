@@ -59,26 +59,29 @@
 				}
 }
 %advancedContentStyle {
-	#text-as-q,
-	#text-as-epq,
-	#text-as-oq,
-	#text-as-eq,
-	#input-as-q,
-	#input-as-epq,
-	#input-as-eq,
-	#input-as-oq {
+	.advanced-content {
+		&:nth-child(1) {
+				width: 500px;
+		}
+		&:nth-child(2) {
+			margin-right: 30px;
+		}
 		width: 100%;
 	}
-	#input-as-q,
-	#input-as-epq,
-	#input-as-eq,
-	#input-as-oq {
-		margin-right: 30px;
-	}
-	#label-as-q,
-	#label-as-epq,
-	#label-as-eq,
-	#label-as-oq {
-		width: 500px;
-	}
+}
+%logoStyle {
+	width: 100%;
+	position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			height: 109px;
+			bottom: 0;
+			background: url(../img/search-logo.svg) no-repeat 100% 100%;
+			background-size: contain;
+			width: 400px;
+		}
+}
+%Width320 {
+	width: 100%;
 }

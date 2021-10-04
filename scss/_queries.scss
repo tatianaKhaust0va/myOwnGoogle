@@ -1,0 +1,57 @@
+@media (max-width: 375px) and (min-width: 320px) {
+ .container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-left: 5px;
+ }
+.header {
+ &-nav {
+  max-width: 370px;
+  &__logo {
+  }
+ }
+ &__logo {
+    max-width: 310px;
+    position: relative;
+    &.search-img {
+     &::after {
+      content: "";
+      position: absolute;
+      top: 95%!important;
+      right: 5%!important;
+      display: block;
+     }
+    }
+    &::before {
+     content: "";
+     left: 50%;
+     transform: translate(-50%);
+     width: 100%;
+    }
+ }
+}
+.main {
+ &-form {
+  &.img-search {
+   height: 30vh;
+  }
+  &-btns {
+   &__item {
+    margin-top: 30px;
+    &:first-child {
+     margin-top: 0;
+    }
+   }
+  }
+  &-search {
+   &__label {
+      width: 31ch!important;
+      font-size: 12px!important;
+   }
+   &__item {
+     max-width: 230px;
+   }
+  }
+ }
+}
+} 
